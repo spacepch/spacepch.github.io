@@ -1,0 +1,242 @@
+
+/*================ pps-button ================*/
+.pps-button {
+    cursor: pointer;
+    user-select: none;
+    color: #2e2e2e;
+    background: #eabf32;
+    text-align: center;
+    border: none;
+    border-radius: 13px 13px 13px 13px;
+    box-shadow: inset 0px 0px 1px 1px #cb9e0a;
+}
+
+.pps-button:hover {
+    filter: brightness(95%);
+}
+
+.pps-button:active {
+    box-shadow: inset 3px 3px 3px 2px #cb9e0a;
+}
+
+/*===================== end =====================*/
+
+
+/*============ pps-confirm-button ===============*/
+.pps-button-confirm {
+    cursor: pointer;
+    user-select: none;
+    text-align: center;
+    color: #2e2e2e;
+    background-color: skyblue;
+    border: none;
+    border-radius: 13px 13px 13px 13px;
+    box-shadow: inset 0px 0px 1px 1px rgb(50, 188, 242);
+}
+.pps-button-confirm:hover {
+    filter: brightness(90%);
+}
+.pps-button-confirm:active {
+    box-shadow: inset 3px 3px 3px 2px rgb(50, 176, 225);
+}
+/*===================== end =====================*/
+
+
+/*============== pps-button-delete ===============*/
+.pps-button-delete{
+    cursor: pointer;
+    user-select: none;
+    text-align: center;
+    background-color: rgb(252, 40, 40);
+    border: none;
+    border-radius: 13px 13px 13px 13px;
+    box-shadow: inset -0px 0px 1px 1px rgb(148, 5, 5);
+}
+.pps-button-delete:hover {
+    filter: brightness(93%);
+}
+.pps-button-delete:active {
+    box-shadow: inset 3px 3px 3px 2px rgb(198, 6, 6);
+}
+/*===================== end =====================*/
+
+
+
+/*=============== 黑色系搜索框设置 ===============*/
+.pps-search-box-black {
+    position: relative;
+    /* width: 270px; */
+    height: 46px;
+    border: 2px solid #8f8f8f;
+    border-radius: 15px 15px 15px 15px;
+    background: #2e2e2e;
+}
+
+.pps-search-box-black .pps-input {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 10px;
+    margin: auto;
+    outline: none;
+    width: 200px;
+    height: 30px;
+    background: none;
+    border: none;
+    font-size: 15px;
+    color: #fff;
+}
+
+.pps-search-box-black .pps-button {
+    position: absolute;
+    right: 6px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    width: 50px;
+    height: 35px;
+    color: #2e2e2e;
+    font-weight: bold;
+}
+
+.pps-search-box-black .pps-input:focus {
+    border-bottom: 2px solid #fff;
+}
+.pps-search-box-black .pps-input:hover {
+    filter: brightness(120%);
+}
+/*===================== end =====================*/
+
+
+/*=============== 白色系搜索框设置 ===============*/
+.pps-search-box-white {
+    position: relative;
+    /* width: 300px; */
+    height: 36px;
+    margin: auto;
+    border: 2px solid #d3d5d7;
+    border-radius: 15px 15px 15px 15px;
+    background: #e3e5e7;
+}
+
+.pps-search-box-white .pps-input {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 10px;
+    margin: auto;
+    outline: none;
+    width: 200px;
+    height: 30px;
+    background: none;
+    border: none;
+    font-size: 15px;
+    color: #2e2e2e;
+}
+
+.pps-search-box-white .pps-button {
+    position: absolute;
+    width: 45px;
+    height: 31.5px;
+    right: 6px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    font-weight: bold;
+}
+
+.pps-search-box-white .pps-input:focus {
+    border-bottom: 2px solid #2e2e2e;
+}
+.pps-search-box-white .pps-input:hover{
+    filter: brightness(70%);
+}
+.pps-input-error::placeholder {
+    color: red;
+}
+
+/*===================== end =====================*/
+
+
+/*================= pps弹窗设置 ==================*/
+.pps-window {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.308);
+    z-index: 3;
+}
+.pps-window .window {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 650px;
+    height: 300px;
+    border: #d3d5d7;
+    border-radius: 8px;
+    box-shadow: inset;
+    background-color: #ffffff;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.474);
+}
+.pps-window .window .close {
+    cursor: pointer;
+    position: absolute;
+    bottom: 10px;
+    right: 66px;
+    width: 45px;
+    height: 31px;
+    line-height: 31px;
+    border-radius: 8px;
+    color: #2e2e2e;
+}
+.pps-window .window .pps-button-confirm {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    width: 45px;
+    height: 31.5px;
+    line-height: 31px;
+    border-radius: 8px;
+}
+.pps-window .window .title{
+    cursor: move;
+    width: 100%;
+    height: 40px;
+}
+.pps-window .window .title p{
+    position: absolute;
+    left: 40px;
+    top: 0px;
+    vertical-align: middle;
+    color: #000;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: .1em;
+    text-shadow: 2px 2px 2px  #cb9e0a;
+}
+.pps-window .window .content{
+    position: absolute;
+    left: 40px;
+    top: 70px;
+    width: 420px;
+    height: fit-content;
+    color: #2e2e2e;
+    font-size: 14px;
+}
+.pps-window .window .content p{
+    margin:6px 0 ;
+}
+.pps-window .window .content .warn{
+    color: red;
+}
+.pps-window .window .content .tip{
+    color: blue;
+}
+/*----------------- 适配移动端 ------------------*/
+
+
+/*===================== end =====================*/

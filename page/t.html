@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Access-Control-Allow-Origin" content="*" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="referrer" content="no-referrer">
+    <title>Document</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+    <button onclick="fun()">发送</button>
+    <script>
+        function fun() {
+           var url = 'https://api.bilibili.com/x/polymer/web-dynamic/v1/feed/space?&host_mid=293767574';
+           let promise = new Promise((resolve, reject) => {
+               let xhr = new XMLHttpRequest();
+               xhr.open('GET', url, true);
+               xhr.onreadystatechange = function () {
+                   if (xhr.readyState === 4) {
+                       if (xhr.status >= 200 && xhr.status < 300 || xhr.status === 304) {
+                           resolve(JSON.parse(xhr.responseText))
+                       } else {
+                           reject(new Error(xhr.statusText))
+                       }
+                   }
+               };
+               xhr.send();
+           });
+           return promise;
+       }
+       console.log(fun());
+    </script>
+</body>
+</html>

@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="referrer" content="no-referrer">
+    <meta http-equiv="Access-Control-Allow-Origin" content="*" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .main {
+        display: grid;
+        width: fit-content;
+        padding: 15px;
+        border-radius: 15px;
+        grid-gap: 20px;
+        grid-template-columns: repeat(4, 100px);
+        grid-template-rows: repeat(5, 100px);
+        background-color: lightsteelblue;
+        box-shadow: inset 1px 1px 1px 0px rgb(255 255 255 / 80%), inset -1px -1px 1px 0px rgb(40 49 85 / 50%), 1px 1px 3px 0px rgb(40 49 85 / 10%);
+    }
+
+    .item {
+        border: 2px solid #666;
+        border-top: none;
+        border-left: none;
+        box-shadow: #666;
+        text-align: center;
+        line-height: 100px;
+        background-color: #f4f5f6;
+        color: #000;
+        font-size: 40px;
+        border-radius: 25px;
+        cursor: pointer;
+        user-select: none;
+        box-shadow: inset 1px 1px 1px 0px rgb(255 255 255 / 80%), inset -1px -1px 1px 0px rgb(40 49 85 / 50%), 1px 1px 3px 0px rgb(40 49 85 / 10%);
+    }
+
+    .equal:hover,
+    .item:hover,
+    .item-current:hover {
+        background-color: gainsboro;
+    }
+
+    .item-1 {
+        padding: 0 10px 0 0;
+        text-align: right;
+        font-size: 40px;
+        grid-column-start: 1;
+        grid-column-end: 5;
+        border: 1px solid #666;
+        overflow: hidden;
+        background-color: #fff;
+        border-radius: 25px;
+        box-shadow: inset 1px 1px 1px 0px rgb(255 255 255 / 80%), inset -1px -1px 1px 0px rgb(40 49 85 / 50%), 1px 1px 3px 0px rgb(40 49 85 / 10%);
+    }
+
+    .ac {
+        background-color: rgb(250, 169, 20);
+        color: #fff;
+    }
+
+    .equal {
+        background-color: rgb(94, 94, 238);
+        color: #fff;
+    }
+
+    .equal:hover{
+        background-color: rgba(94, 94, 200, 0.732);
+    }
+
+    .ac:hover {
+        background-color: rgba(250, 169, 20, 0.732);
+        color: #fff;
+        /* box-shadow: inset 0 0 0 0 rgba(255, 255, 255, 0), inset 0 0 0 0 rgba(40, 49, 85, 0), 0 0 0 0 rgba(40, 49, 85, 0); */
+    }
+
+    .item-current {
+        /* border: 1px solid #666; */
+        border-top: none;
+        border-left: none;
+        box-shadow: #666;
+        text-align: center;
+        line-height: 100px;
+        background-color: #f4f5f6;
+        color: #000;
+        font-size: 40px;
+        border-radius: 25px;
+        cursor: pointer;
+        user-select: none;
+    }
+</style>
+
+<body>
+
+    <div class="main">
+        <div class="item-1">
+
+        </div>
+        <div class="item" id="seven">7</div>
+        <div class="item" id="eight">8</div>
+        <div class="item" id="nine">9</div>
+        <div class="item ac" id="ac" style="">AC</div>
+        <div class="item" id="four">4</div>
+        <div class="item" id="five">5</div>
+        <div class="item" id="six">6</div>
+        <div class="item" id="divided">÷</div>
+        <div class="item" id="one">1</div>
+        <div class="item" id="two">2</div>
+        <div class="item" id="three">3</div>
+        <div class="item" id="multiplied">×</div>
+        <div class="item" id="zero">0</div>
+        <div class="item" id="plus">+</div>
+        <div class="item equal" id="equal">=</div>
+        <div class="item" id="minus">-</div>
+    </div>
+    <button onclick="searchY()">跳转</button>
+        <script>
+            var searchIpt = document.querySelector('.searchIpt');
+
+            function searchY() {
+                var httpRequest2 = new XMLHttpRequest();
+                // var verifyPwd = 8888;
+                var url = "ws://127.0.0.1:5500/demo1/page/1.html";
+                httpRequest2.open('GET', url, true);
+                httpRequest2.send();
+                httpRequest2.onreadystatechange = function () {
+                    if (httpRequest2.readyState == 4 && httpRequest2.status == 200) {
+                        var result = httpRequest2.responseText;
+                        // var jsch2 = JSON.parse(result);
+                        console.log(result)
+                    }
+                }
+            }
+        </script>
+</body>
+
+<script>
+    var seven = document.querySelector('#seven');
+    var eight = document.querySelector('#eight');
+    var nine = document.querySelector('#nine');
+    var ac = document.querySelector('#AC');
+    var four = document.querySelector('#four');
+    var five = document.querySelector('#five');
+    var six = document.querySelector('#six');
+    var divided = document.querySelector('#divided');
+    var one = document.querySelector('#one');
+    var two = document.querySelector('#two');
+
+    var all = document.querySelectorAll('.item')
+    var view = document.querySelector('.item-1')
+
+    view.innerText = 0
+
+    for (var i = 0; i < all.length; i++) {
+        all[i].onclick = function () {
+
+            // 不同首个按键显示
+            switch (this.innerText) {
+                case 'AC':
+                    view.innerText = 0
+                    break;
+                case '0':
+                    if (view.innerText == 0)
+                        view.innerText = 0
+                    else
+                        view.innerText += 0
+                    break;
+                default:
+                    if (view.innerText == 0)
+                        view.innerText = ''
+                    view.innerText += this.innerText
+                    break;
+            }
+
+            // 判断输入长度
+            if (29 > view.innerText.length && view.innerText.length > 19) {
+                view.style.fontSize = 20 + 'px'
+            } else if (view.innerText.length < 19) {
+                view.style.fontSize = 40 + 'px'
+            } else if (view.innerText.length > 39) {
+                view.style.fontSize = 10 + 'px'
+            }
+
+
+
+        }
+        // 按钮按下效果
+        all[i].onmousedown = function () {
+            if (this.className != 'item ac') {
+                console.log(this.className != 'item ac');
+                this.className = "item item-current"
+            } else if (this.className == 'item ac') {
+                this.className = "item ac"
+            }
+        }
+        all[i].onmouseup = function () {
+            if (this.className != 'item ac') {
+                this.className = "item"
+            } else if (this.className == 'item ac') {
+                this.className = "item ac"
+            }
+        }
+    }
+</script>
+
+</html>

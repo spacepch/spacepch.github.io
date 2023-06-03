@@ -1,0 +1,549 @@
+body,
+div,
+span,
+svg,
+video,
+img,
+ul,
+li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    vertical-align: bottom;
+}
+
+body {
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    position: absolute;
+    height: 1000px;
+    width: 100%;
+}
+
+:root {
+    --num: 0;
+}
+
+.cc {
+    background-color: rgba(102, 102, 102, var(--num));
+}
+
+.content-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-content: center;
+    flex-wrap: wrap;
+    position: absolute;
+    top: 145px;
+    width: 100vw;
+}
+
+.silBox {
+    position: relative;
+    width: 205px;
+    height: 45px;
+    text-align: center;
+    background-color: #fff;
+}
+
+.silder {
+    width: 200px;
+    height: 20px;
+    background-color: #fff;
+    border: 2px solid rgb(102, 102, 102);
+}
+
+.moveBtn {
+    position: absolute;
+    left: 0px;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    border: 1px solid #888;
+    background-color: lightblue;
+    cursor: pointer;
+    user-select: none;
+}
+
+.moveBtn:hover {
+    background-color: rgb(36, 173, 228);
+}
+
+
+
+/************** 图标 **************/
+/* .nav-item .nav-item-container .item1 svg {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 95px;
+    margin: auto;
+} */
+
+/* .nav-item:hover .item1 path {
+    fill: #000;
+} */
+
+footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    min-width: 100%;
+    height: 100px;
+    background: #2e2e2e;
+}
+
+footer p {
+    color: #fff;
+    letter-spacing: .1em;
+    text-align: center;
+    margin: 0 0 3px 0;
+}
+
+/*********** 图标结束 ***********/
+
+
+
+
+/***** QQ区域样式（与B站相同未整理） *****/
+.qq-part {
+    position: relative;
+}
+
+.qq-user-table {
+    position: relative;
+    width: fit-content;
+    border: 1px solid #e3e3e7;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.141);
+    border-radius: 15px;
+    background: #fff;
+    padding-bottom: 10px;
+}
+
+.qq-user-table hr {
+    padding: 0;
+    margin: 0;
+    margin: 0 10px;
+}
+
+.qq-user-table .user-avatar {
+    /* position: absolute; */
+    margin: auto;
+    width: fit-content;
+    height: fit-content;
+}
+
+.qq-user-table .user-avatar a img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.qq-user-table .user-avatar a img:hover {
+    filter: brightness(75%);
+}
+
+.qq-user-table .table-item {
+    position: relative;
+    margin: 0 10px;
+    height: 30px;
+    width: 300px;
+    line-height: 30px;
+}
+
+.qq-user-table .table-item .item-title {
+    position: absolute;
+    left: 10px;
+    width: 64px;
+    text-align-last: justify;
+    color: #2e2e2e;
+    font-weight: bold;
+}
+
+.qq-user-table .table-item .item-content {
+    position: absolute;
+    left: 89px;
+    height: 30px;
+    width: 211px;
+    background: #fff;
+    color: #2e2e2e;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.qq-user-table .table-item .item-content:hover {
+    border-radius: 8px;
+    filter: brightness(95%);
+}
+
+/*********** QQ区域结束 **********/
+
+
+
+
+/********* B站区域样式 **********/
+.bili-part {
+    position: relative;
+    /* visibility:hidden; */
+}
+
+.bili-user-table hr {
+    padding: 0;
+    margin: 0;
+    margin: 0 10px;
+}
+
+.bili-user-table {
+    position: relative;
+    width: fit-content;
+    border: 1px solid #e3e3e7;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.144);
+    border-radius: 15px;
+    background: #fff;
+    padding-bottom: 10px;
+}
+
+.bili-user-table .table-item {
+    position: relative;
+    margin: 0 10px;
+    height: 30px;
+    width: 300px;
+    line-height: 30px;
+}
+
+.bili-user-table .table-item .item-title {
+    position: absolute;
+    left: 10px;
+    width: 64px;
+    text-align-last: justify;
+    color: #2e2e2e;
+    font-weight: bold;
+}
+
+.bili-user-table .table-item .item-content {
+    position: absolute;
+    left: 89px;
+    height: 30px;
+    width: 211px;
+    background: #fff;
+    color: #2e2e2e;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.bili-user-table .user-avatar {
+    /* position: absolute; */
+    margin: auto;
+    width: fit-content;
+    height: fit-content;
+}
+
+.bili-user-table .user-avatar a img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.bili-user-table .user-avatar a img:hover {
+    filter: brightness(75%);
+}
+
+.bili-user-table .table-item .item-content span {
+    display: block;
+    width: 80px;
+    margin: auto;
+    text-align: center;
+    border-radius: 5px;
+    /* font-weight: bold; */
+    /* color: #fff; */
+}
+
+.bili-user-table .table-item .item-content:hover {
+    border-radius: 8px;
+    filter: brightness(95%);
+}
+
+.bili-user-table .user-sign .item-content:hover::before {
+    cursor: pointer;
+    content: '点击查看更多';
+    padding-left: 45px;
+    padding-right: 45px;
+    color: blue;
+}
+
+.bili-user-table .table-item .item-content-hidden {
+    position: relative;
+    left: 315px;
+    bottom: 5px;
+    padding: 5px;
+    width: fit-content;
+    color: #2e2e2e;
+    border: 1px solid #eabf32;
+    border-radius: 8px;
+    background-color: #eabf32;
+    user-select: none;
+    z-index: 2;
+}
+
+.bili-user-table .table-item .item-content-hidden i {
+    position: absolute;
+    top: 10px;
+    left: -20px;
+    width: 0;
+    height: 0;
+    border: 10px solid #ecbc20;
+    border-top-color: transparent;
+    border-left-color: transparent;
+    border-bottom-color: transparent;
+}
+
+.bili-user-table .table-item .item-content-hidden strong {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    color: #e2e2e2;
+    background-color: #2e2e2e;
+    text-align: center;
+    vertical-align: text-top;
+    border: 1px solid #e2e2e2;
+    border-radius: 50%;
+}
+
+/*********** B站区域结束 ***********/
+
+
+
+
+/************* B站删除 *************/
+.bili-user-table .pps-button-delete {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 57px;
+    width: 45px;
+    height: 31.5px;
+    margin: auto;
+    font-weight: bold;
+    color: #2e2e2e;
+}
+
+/************* 删除结束 ************/
+
+
+
+
+
+/*************************** 新标题栏 ****************************/
+/* 电脑端 */
+nav {
+    display: flex;
+    position: fixed;
+    justify-content: space-between;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 50px;
+    background-color: #2e2e2e;
+    z-index: 2;
+}
+
+nav .home-log {
+    display: flex;
+    width: 50px;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+}
+
+
+nav .menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+}
+
+
+/* 导航栏区域 */
+nav .nav-list {
+    display: flex;
+    flex: 1;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: left;
+    height: 100%;
+}
+
+nav .nav-list .nav-item {
+    position: relative;
+}
+
+nav .nav-list .nav-item .top-item {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 110px;
+    height: 100%;
+    color: #fff;
+    font-size: 14px;
+}
+
+nav .nav-list .nav-item .bottom-item {
+    visibility: hidden;
+    position: absolute;
+    width: fit-content;
+    height: 100px;
+    width: 200px;
+    background: #eabf32;
+    border: 1px solid #6e6e6e;
+    border-top: none;
+}
+
+nav .nav-list .nav-item .top-item .down-arrow {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 6px;
+    border: 4px solid #fff;
+    border-left-color: transparent;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+}
+
+/* 鼠标悬浮 */
+nav .nav-list .nav-item:hover .top-item {
+    background: #eabf32;
+    color: #2e2e2e;
+}
+
+nav .nav-list .nav-item:hover .bottom-item {
+    animation: animate1 .2s forwards ease 1;
+}
+
+nav .nav-list .nav-item:hover .down-arrow {
+    border: 4px solid #2e2e2e;
+    border-left-color: transparent;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+}
+
+nav .nav-list .nav-item:hover .top-item path {
+    fill: #000;
+}
+
+/* 弹窗按钮区域 */
+nav .local-log {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 180px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+nav .local-log .local-delete {
+    height: 30px;
+    width: 70px;
+    border-radius: 8px;
+}
+
+nav .local-log .local-close {
+    height: 30px;
+    width: 70px;
+    border-radius: 8px;
+}
+
+nav .local-log .ico {
+    /* flex: 1; */
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid #3e5e7e;
+}
+
+/* 动画 */
+@keyframes animate1 {
+    from {
+        height: 0px;
+    }
+
+    to {
+        height: 100px;
+        visibility: visible;
+    }
+}
+
+/* 电脑端结束 */
+
+
+
+/* 手机端 */
+.mobile-nav {
+    position: fixed;
+    top: -150px;
+    left: 0;
+    width: 100%;
+    height: 200px;
+    background-color: #2e2e2e;
+    color: #eabf32;
+    z-index: 1;
+}
+
+.mobile-nav .nav-list {
+    position: relative;
+    margin-left: 20px;
+}
+
+.mobile-nav .nav-list .nav-item {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+}
+
+.mobile-nav .nav-list .nav-item .top-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    width: 100px;
+}
+
+.mobile-nav .nav-list .nav-item .bottom-item {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 110px;
+    background-color: #eabf32;
+    width: 100%;
+    height: 200px;
+    color: #2e2e2e;
+}
+
+.mobile-nav .nav-list .nav-item:hover .down-arrow {
+    border: 4px solid #eabf32;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    border-top-color: transparent;
+}
+
+/* 伪类 */
+.mobile-nav .nav-list .nav-item .top-item:active {
+    color: #fff;
+}
+
+.mobile-nav .nav-list .nav-item:active .top-item path {
+    fill: #ffffff;
+}
+
+/*************************** 新标题栏结束 ****************************/
