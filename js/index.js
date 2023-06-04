@@ -102,22 +102,22 @@ import pps from './ppsQuery.js'
         let level_svg;
         let div = document.createElement('div');
         switch (value) {
-            case '1':
+            case 1:
                 level_svg = level_1;
                 break;
-            case '2':
+            case 2:
                 level_svg = level_2;
                 break;
-            case '3':
+            case 3:
                 level_svg = level_3;
                 break;
-            case '4':
+            case 4:
                 level_svg = level_4;
                 break;
-            case '5':
+            case 5:
                 level_svg = level_5;
                 break;
-            case '6':
+            case 6:
                 level_svg = level_6;
                 break;
             default:
@@ -146,23 +146,14 @@ import pps from './ppsQuery.js'
         let uid = search_input.value.trim();
         if (uid.length) {
             search_input.classList.remove('pps-input-error');
-            let url = `http://192.168.10.3:5000/apiBilibili`;
-            // if (/Mobi|Android|iPhone/i.test(navigator.userAgent)) {
-            //     console.log('手机版');
-            //     url = `http://192.168.10.3:5000/apiBilibili`;
-            // } else {
-            //     console.log('电脑版');
-            //     url = `http://127.0.0.1:5000/apiBilibili`;
-            // }
-            // if (!uid) uid = 388609984;
+            let url = `https://tenapi.cn/bilibili/`;
             pps.ppsAjax({
                 url: url,
                 method: "get",
                 data: { uid },
                 async: true,
                 success: function (res) {
-                    // alert(1)
-                    // console.log(res);
+                    res=res.data;
                     bili_name.innerText = `${res.name}`;
                     bili_fans.innerText = `${res.fans}`;
                     setSign(bili_sign, res.sign);
