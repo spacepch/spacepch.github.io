@@ -381,29 +381,56 @@
                 </div>
                 <hr>
             </div>
+            <div>
+                <div class="search-bilibli" style="">
+                    <div class="pps-search-box-black" style="">
+                        <input class="pps-input" type="text" id="input-search-bilibli" placeholder="搜索B站视频~">
+                        <button class="pps-button" onclick="searchBilibili()">搜索</button>
+                    </div>
+                </div>
+                <script defer>
+                    function searchBilibili() {
+                        let inputValue = document.querySelector('#input-search-bilibli').value;
+                        let url = `https://search.bilibili.com/upuser?keyword=${inputValue}`;
+                        window.open(url);
+                    }
+
+                    function show() {
+                        let num = document.querySelector('.ran');
+                        console.log(num.value);
+                    }
+                </script>
+            </div>
 
         </div>
 
         <!-- ******************************** -->
 
-        <div class="search-bilibli" style="position:relative;">
-            <div class="pps-search-box-black" style="width: 270px;">
-                <input class="pps-input" type="text" id="input-search-bilibli" placeholder="搜索B站视频~">
-                <button class="pps-button" onclick="searchBilibili()">搜索</button>
+        <div class="github-part">
+            <div class="github-user-table">
+                <div class="pps-search-box-white">
+                    <input type="text" class="headIpt pps-input" placeholder="输入github用户名">
+                    <button class="searchBtn pps-button">查找</button>
+                </div>
+                <div class="user-avatar">
+                    <a href="javascript:;">
+                        <img src="" alt=""
+                            class="avatar-img">
+                    </a>
+                </div>
+                <div class="user-uid table-item">
+                    <span class="item-title">用户id</span>
+                    <span class="item-content"></span>
+                </div>
+                <hr>
+                <div class="user-name table-item">
+                    <span class="item-title">用户名</span>
+                    <span class="item-content"></span>
+                </div>
+                <hr>
             </div>
         </div>
-        <script defer>
-            function searchBilibili() {
-                let inputValue = document.querySelector('#input-search-bilibli').value;
-                let url = `https://search.bilibili.com/upuser?keyword=${inputValue}`;
-                window.open(url);
-            }
-
-            function show() {
-                let num = document.querySelector('.ran');
-                console.log(num.value);
-            }
-        </script>
+        
     </div>
     <div class="videoBox">
     </div>
