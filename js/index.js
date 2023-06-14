@@ -256,3 +256,28 @@ import pps from './ppsQuery.js'
         if (local_flag) { localFalse() } else { localTrue() }
     }
 }
+
+//获取github账户
+{
+    const github = document.querySelector('.github-part');
+    const search_input = github.querySelector('.headIpt');
+    const searchBtn = github.querySelector('.searchBtn');
+    const github_avatar = github.querySelector('.avatar-img');
+    const github_link = github.querySelector('a');
+    const github_name = github.querySelector('.user-name .item-content');
+    const github_uid = github.querySelector('.user-uid .item-content')
+
+
+    searchBtn.onclick = function () {
+        pps.ppsAjax({
+            url: `https://api.github.com/users/${search_input.value}`,
+            success: function (res) {
+                github_uid.innerText = res.id;
+                github_name.innerText = res.login;
+                github_avatar.src = res.avatar_url;
+                github_link.href = res.html_url;
+                github_link.target = '_blank'
+            }
+        })
+    }
+}
