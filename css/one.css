@@ -40,6 +40,10 @@ body {
     width: 100vw;
 }
 
+.content-section>div{
+    margin-bottom:10px;
+}
+
 .silBox {
     position: relative;
     width: 205px;
