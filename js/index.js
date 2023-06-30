@@ -146,7 +146,7 @@ import pps from './ppsQuery.js'
         let uid = search_input.value.trim();
         if (uid.length) {
             search_input.classList.remove('pps-input-error');
-            let url = `https://tenapi.cn/v2/biliinfo/`;
+            let url = `https://tenapi.cn/bilibili/`;
             pps.ppsAjax({
                 url: url,
                 method: "get",
