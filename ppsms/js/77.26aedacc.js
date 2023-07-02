@@ -1,0 +1,2 @@
+"use strict";(self["webpackChunkvue_event"]=self["webpackChunkvue_event"]||[]).push([[77],{1077:function(e,t,s){s.r(t),s.d(t,{default:function(){return i}});var a=function(){var e=this,t=e._self._c;return t("el-card",{staticClass:"box-card"},[t("div",{staticClass:"clearfix header-box",attrs:{slot:"header"},slot:"header"},[t("span",[e._v("文章列表")])]),e._v(" 看什么看还没写完 ")])},l=[],n={name:"my-list"},r=n,u=s(1001),c=(0,u.Z)(r,a,l,!1,null,null,null),i=c.exports}}]);
+//# sourceMappingURL=77.26aedacc.js.map
